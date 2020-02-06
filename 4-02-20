@@ -1,0 +1,68 @@
+
+var stringa = "hello"
+var stringb = String("hello")
+var stringc = """
+hi my name is rajat
+i am from jalandhar
+i am in zapbuild
+"""
+stringa = stringa + "bye"
+stringb = stringb + "bye"
+stringc = stringc + "\nbye"
+
+print(stringa)
+print(stringb)
+print(stringc)
+
+
+var varA = "Hello,"
+var varB = "Hello,"
+
+if varA == varB {
+    print( "\(varA) and \(varB) are equal" )
+} else {
+    print( "\(varA) and \(varB) are not equal" )
+}
+ 
+
+
+
+class First{
+    var book: String
+    var book1: Second?
+    init(book: String,book1: Second?) {
+        self.book = book
+        self.book1 = book1
+        print("initialize first")
+    }
+    deinit {
+        print("deinit first")
+    }
+}
+
+class Second{
+    var book2: String
+    var book3: First?
+    init(book2: String,book3: First?) {
+        self.book2 = book2
+        self.book3 = book3
+        print("initialize second")
+    }
+    deinit {
+        print("deinit second")
+    }
+}
+
+var a: First?
+var b: Second?
+
+
+a = First(book: "hello", book1: nil)
+b = Second(book2: "hello1", book3: nil)
+
+b?.book3 = a
+a?.book1 = b
+
+a = nil
+b = nil
+
