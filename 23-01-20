@@ -1,0 +1,112 @@
+// classes function
+ 
+class Spaceship{
+    var fuelLevel = 50
+    func liftOff(){
+        fuelLevel = fuelLevel - 50
+        print("we have lift off")
+        print("current fuel level at: \(fuelLevel) ")
+        
+    }
+    func addFuel(fuel:Int){
+        fuelLevel = fuelLevel + fuel
+        print("fuel added")
+        print("current fuel level at: \(fuelLevel) ")
+    }
+    func thrust() {
+        fuelLevel = fuelLevel - 15
+        print("rocket is thursting")
+        print("current fuel level at: \(fuelLevel) ")
+    }
+    func cruise(){
+        fuelLevel = fuelLevel - 5
+        print("rocket is cruising")
+        print("current fuel level at: \(fuelLevel) ")
+    }
+}
+var a = Spaceship()
+a.addFuel(fuel: 50)
+a.liftOff()
+a.thrust()
+a.cruise()
+ 
+ 
+// optional unwrapping
+
+var str: String?
+
+str = "Test"
+
+if let strConst = str {
+    print(strConst)
+} else {
+    print("str has no value")
+}
+
+
+// switch
+ 
+let a = 5
+
+switch a {
+case 0:
+    print("a is equal to 0")
+case 1:
+    print("a is equal to 1")
+default:
+    print("a has another value")
+}
+
+
+
+
+
+switch a {
+case 0..<5:
+    print("The value of a lies between 0 and 4.")
+case 5...10:
+    print("The value of a lies between 5 and 10.")
+default:
+    print("The value of a is greater than 10.")
+}
+
+
+// two way number
+
+let latlng = (34.15, -78.03)
+
+switch latlng {
+case (0, 0):
+    print("We're at the center of the planet.")
+case (0...90, _):
+    print("We're in the Northern hemisphere.")
+case (-90...0, _):
+    print("We're in the Southern hemisphere.")
+default:
+    print("The coordinate is invalid.")
+}
+
+ 
+var response = (200, "OK")
+
+switch response {
+case (200..<400, let description):
+    print("The request was successful with description \(description).")
+case (400..<500, let description):
+    print("The request was unsuccessful with description \(description).")
+default:
+    print("The request was unsuccessful with no description.")
+}
+
+var str: String?
+
+str = "Test"
+
+if str != nil{
+    print(str!)
+} else {
+    print("str has no value")
+}
+
+
+
