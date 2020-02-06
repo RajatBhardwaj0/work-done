@@ -1,0 +1,139 @@
+
+//sets
+
+
+var someSet = Set<Character>()
+someSet.insert("a")
+
+someSet.insert("c")
+someSet.insert("b")
+print(someSet)
+
+
+
+let evens: Set = [10,12,14,16,18]
+let odds: Set = [5,7,9,11,13]
+let primes = [2,3,5,7]
+print(odds.union(evens).sorted())
+
+// [5,7,9,10,11,12,13,14,16,18]
+print(odds.intersection(evens).sorted())
+//[]
+print(odds.subtracting(primes).sorted())
+//[9, 11, 13]
+
+
+
+open class Arr{
+    var b = 1
+}
+var a = Arr()
+print(a.b)
+
+
+
+let ingredients: Set = ["cocoa beans", "sugar", "cocoa butter", "salt"]
+let ingredient: Set = ["cocoa beans", "cocoa butter", "salt", "sugar"]
+if(ingredient _: "sugar"){
+    print("same")
+}else{
+    print("not same")
+}
+
+ var numString = 50
+//var num = numString.digitc
+ //var digits = floor( log10( numString ) ) + 1;
+
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
+}
+var rangeOfThreeItems = FixedLengthRange(firstValue: 0, length: 3)
+print(rangeOfThreeItems)
+// the range represents integer values 0, 1, and 2
+rangeOfThreeItems.firstValue = 6
+print(rangeOfThreeItems.firstValue)
+
+
+
+// properties
+
+class Hello{
+    public var a = 1
+
+    func abc() -> Int{
+        a = a + 1
+        return a
+        
+    }
+    func ab() -> Int{
+        a = a + 2
+        return a
+    }
+    func abcd() -> Int{
+        a = a + 3
+        return a
+    }
+}
+class Hello1: Hello {
+    
+    func hella() -> Int{
+        a = 1
+        return a
+    }
+    
+}
+var b = Hello1()
+print(b.abcd())
+print(b.ab())
+print(b.a)
+print(b.hella())
+
+
+
+var threeDoubles = Array(repeating: 0.5, count: 3)
+print(threeDoubles)
+var letters = Set<Character>()
+print(letters)
+letters.insert("a")
+print(letters)
+print(type(of: letters))
+letters = []
+print(letters)
+print(type(of: letters))
+ 
+
+var sum = 0
+func checkPerfectNumber(a: Int) -> Bool{
+    
+    for i in 1..<a{
+        if(a % i == 0){
+            sum = sum + i
+        }
+    }
+    if(sum == a){
+        return true
+    }else{
+        return false
+    }
+    
+}
+print(checkPerfectNumber(a: 6))
+
+
+
+var letters = Set<Character>()
+//letters.insert("a")
+letters.insert("a")
+letters.insert("b")
+letters.insert("c")
+print(letters)
+
+let capitals = ["England": "London", "Wales": "Cardiff"]
+let scotlandCapital = capitals["Scotland"]
+
+var favoriteColors = Dictionary<String, String>()
+print(favoriteColors)
+
+
+
