@@ -1,0 +1,107 @@
+
+enum Planet: Int {
+    case mercury = 1
+    case venus
+    case earth
+    case mars
+}
+
+print(Planet.init(rawValue: 3))
+
+
+enum Planet {
+    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+var a = Planet.earth
+print(a , terminator: " hello ")
+a = .jupiter
+print(a)
+a = .mars
+switch a {
+case .earth:
+    print("you are on \(a)")
+case .mercury:
+    print("you are on \(a)")
+case .mars:
+    print("you are on \(a)")
+case .saturn:
+    print("you are on \(a)")
+case .venus:
+    print("you are on \(a)")
+case .jupiter:
+    print("you are on \(a)")
+case .uranus:
+    print("you are on \(a)")
+case .neptune:
+    print("you are on \(a)")
+
+}
+
+
+
+enum Beverage: String {
+    case coffee = "k,ds"
+    case tea = "kvsd"
+    case green = "adf"
+}
+for i in Beverage {
+    print(i.rawvalue)
+}
+
+
+
+enum Suit: String {
+    case spades = "♠"
+    case hearts = "♥"
+    case diamonds = "♦"
+    case clubs = "♣"
+}
+for suit in 0...3 {
+        // do something with suit
+    
+}
+ 
+ 
+enum ASCIIControlCharacter: String {
+    case tab = "k"
+    case lineFeed = "lvmfs"
+    case carriageReturn
+}
+print(ASCIIControlCharacter.carriageReturn.rawValue)
+
+let possiblePlanet = ASCIIControlCharacter(rawValue: "linefeed")
+print(possiblePlanet)
+ 
+
+
+
+var str = "madam"
+if(str.elementsEqual(str.reversed())){
+    print("the strin is palindrome")
+}else{
+    print("the string is not palindrome")
+}
+
+var st: String = ""
+print(st)
+
+
+
+var n = 8
+var a = [Int]()
+if(n < 1) {
+    print("you do not have any value")
+}else if(n == 1){
+    a = [0]
+    print(a)
+}else if(n == 2){
+    a = [0,1]
+    print(a)
+}else{
+    a = [0,1]
+    for i in 2..<n{
+        a.append(a[i - 2] + a[i - 1])
+    }
+    print(a)
+}
+
